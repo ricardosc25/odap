@@ -226,7 +226,7 @@ class Odap extends CI_Controller {
 				$this->email->message('<b>Hola '.set_value("nombres").',</b><br><p>Este es un mensaje de prueba.</>');
 				if($this->email->send()) //Si el correo se envió exitosamente, entonces
 					  {
-					   	$this->success(); //Cargamos la funcion success
+					   	$this->success(); //Cargamos la funcion success.
 					  }
 
   				else
