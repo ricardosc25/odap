@@ -117,15 +117,10 @@ class Odap extends CI_Controller {
 
 	public function contacto()
 	{
-		if($this->session->userdata('login'))
-        {
+
             $data['title'] = 'Contacto';
-			$data['main_content'] = 'contacto';
-			$this->load->view('template',$data);
-        }
-        else{
-        	redirect('/login/index/');
-        }
+	    $data['main_content'] = 'contacto';
+	    $this->load->view('template',$data);
 		
 	}
 
