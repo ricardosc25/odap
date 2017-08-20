@@ -26,7 +26,8 @@
 		</ul>
 	</div>
 	<!-- Seccion de promocion -->
-	<div class="row">
+	<div class="container">
+		<div class="row">
 		<div class="col s6 m6 l6 xl6">
 			<div class="center promo promo-example">
 				<i class="material-icons">border_color</i>
@@ -41,4 +42,6 @@
 				<p class="left-align">Sucursales Bancolombia, transferencias electrónicas y consignaciones en corresponsales Bancolombia A la mano, a la cuenta de ahorros Nº. 767777606-84.</p>
 			</div>
 		</div>
+	</div>	
 	</div>
+	
