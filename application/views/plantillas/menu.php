@@ -17,7 +17,7 @@
         <li class="right"><a href="<?php echo base_url();?>login/logout"><i class="material-icons left">lock_outline</i>Cerrar sesión</a></li>
           <li class="right"><a class="blue-grey darken-3" href="<?php echo base_url();?>odap/publicaciones"><i class="material-icons left orange-text">visibility</i>Nueva publicación</a></li>
         <?php }else{ ?> 
-         <li><a href="<?php echo base_url();?>login/"><i class="material-icons left">lock_open</i>Login</a></li>
+         <li class="right"><a href="<?php echo base_url();?>login/"><i class="material-icons left">lock_open</i>Login</a></li>
        </ul>
        <?php } ?>
        <ul class="side-nav blue-grey lighten-5" id="mobile-demo">
