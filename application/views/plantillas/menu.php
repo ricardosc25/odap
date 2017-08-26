@@ -10,6 +10,7 @@
           <li><a href="<?php echo base_url();?>odap/index">Inicio</a></li>
           <li><a href="<?php echo base_url();?>odap/nosotros">Nosotros</a></li>
           <li><a href="<?php echo base_url();?>odap/capacitaciones">Capacitaciones</a></li>
+          <li><a href="<?php echo base_url();?>odap/galeria">Galería</a></li>
           <li><a href="<?php echo base_url();?>odap/inscripcion">Inscripciones</a></li>
           <li><a href="<?php echo base_url();?>odap/contacto">Contacto</a></li>     
 
@@ -24,6 +25,7 @@
         <li><a href="<?php echo base_url();?>odap/index">Inicio</a></li>
         <li><a href="<?php echo base_url();?>odap/nosotros">Nosotros</a></li>
         <li><a href="<?php echo base_url();?>odap/capacitaciones">Capacitaciones</a></li>
+        <li><a href="<?php echo base_url();?>odap/galeria">Galería</a></li>
         <li><a href="<?php echo base_url();?>odap/inscripcion">Inscripciones</a></li>
         <li><a href="<?php echo base_url();?>odap/contacto">Contacto</a></li>
 

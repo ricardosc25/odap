@@ -33,6 +33,14 @@
 				$('select').material_select();
 				$('.materialboxed').materialbox();
 				$('.modal').modal();
+				 $('.carousel.carousel-slider').carousel({fullWidth: true}); //Utilizado por la galería
+				 	$('#nextButton').click(function() {
+    				$('.carousel').carousel('prev');
+					});
+
+					$('#beforeButton').click(function() {
+    				$('.carousel').carousel('next');
+					});
 
 				$('.datepicker').pickadate({
 				    selectMonths: true, // Creates a dropdown to control month

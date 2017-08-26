@@ -32,6 +32,13 @@ class Odap extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 
+	public function galeria()
+	{	
+		$data['title'] = 'Odap';
+		$data['main_content'] = 'galeria';
+		$this->load->view('template',$data);
+	}
+
 	public function publicaciones()
 	{
 		if($this->session->userdata('login')){
