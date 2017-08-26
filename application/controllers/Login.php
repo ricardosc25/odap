@@ -38,7 +38,7 @@ class Login extends CI_Controller {
 		{
 			$data = array(
 				'user' => $this->input->post('usuario'),
-				'pass' => $this->input->post('contrasena'),
+				'pass' => md5($this->input->post('contrasena')),
 				'login' => TRUE
 			 );
 

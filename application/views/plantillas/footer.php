@@ -34,24 +34,35 @@
 				$('.materialboxed').materialbox();
 				$('.modal').modal();
 				 $('.carousel.carousel-slider').carousel({fullWidth: true}); //Utilizado por la galería
-				 	$('#nextButton').click(function() {
-    				$('.carousel').carousel('prev');
-					});
+				 $('#nextButton').click(function() {
+				 	$('.carousel').carousel('prev');
+				 });
 
-					$('#beforeButton').click(function() {
-    				$('.carousel').carousel('next');
-					});
+				 $('#beforeButton').click(function() {
+				 	$('.carousel').carousel('next');
+				 });
 
-				$('.datepicker').pickadate({
+				 $('.datepicker').pickadate({
+				 	monthsFull: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+				 	monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+				 	weekdaysFull: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+				 	weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+				 	showMonthsShort: undefined,
+				 	showWeekdaysFull: undefined,
 				    selectMonths: true, // Creates a dropdown to control month
 				    selectYears: 15, // Creates a dropdown of 15 years to control year,
-				    today: 'Today',
-				    clear: 'Clear',
+				    today: 'Hoy',
+				    clear: 'Limpiar',
 				    close: 'Ok',
-				    closeOnSelect: false // Close upon selecting a date,
-				  });
-			});
+				    closeOnSelect: false, // Close upon selecting a date,
 
-		</script>
-	</body>
-	</html>
+				    min: 1,
+				    max: 670,
+  				
+
+				});
+				});
+
+			</script>
+		</body>
+		</html>
