@@ -35,11 +35,11 @@
 				$('.modal').modal();
 				 $('.carousel.carousel-slider').carousel({fullWidth: true}); //Utilizado por la galería
 				 $('#nextButton').click(function() {
-				 	$('.carousel').carousel('prev');
+				 	$('.carousel').carousel('next');
 				 });
 
 				 $('#beforeButton').click(function() {
-				 	$('.carousel').carousel('next');
+				 	$('.carousel').carousel('prev');
 				 });
 
 				 $('.datepicker').pickadate({

@@ -1,10 +1,10 @@
   <div class="row">
     <div class="col s4 hide-on-med-and-down m2 l2">
-      <img width="162px" src="<?php echo base_url();?>images/LogoOdap.png"> <!-- img barra de nav escritorio -->
+      <img style="margin-top: 10px;" src="<?php echo base_url();?>images/LogoOdapMovil.png"> <!-- img barra de nav escritorio -->
     </div>
     <nav class="blue-grey lighten-5">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo hide-on-large-only hide-on-med-and-up"><img width="162px" src="<?php echo base_url();?>images/LogoOdap.png"></a><!-- img barra de nav tablet y moviles -->
+          <a href="#" style="margin-top: 10px;" class="brand-logo hide-on-large-only"><img src="<?php echo base_url();?>images/LogoOdapMovil.png"></a><!-- img barra de nav tablet y moviles -->
         <a href="#" data-activates="mobile-demo" class="button-collapse orange-text"><i class="material-icons">menu</i></a>
           <!-- MENÚ MÓVIL -->
           <ul class="side-nav blue-grey lighten-5" id="mobile-demo">
