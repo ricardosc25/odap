@@ -23,6 +23,12 @@
 					
 				</div>
 			</li>
+			<li>
+				<img src="<?php echo base_url();?>images/slider3.jpg">
+				<div class="caption left-align">
+					
+				</div>
+			</li>
 		</ul>
 	</div>
 	<!-- Seccion de promocion -->
