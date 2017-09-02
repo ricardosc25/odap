@@ -58,5 +58,37 @@ class Odap_model extends CI_Model {
 
 	}
 
+	public function listCapacitaciones(){ 
+		$query = $this->db->get('capacitaciones');
+		return $query->result();
+
+	}
+
+	//obtenemos la fila completa del mensaje a editar
+    //vemos que como solo queremos una fila utilizamos
+    //la función row que sólo nos devuelve una fila,
+    //así la consulta será más rápida
+        public function obtener($id) {
+        $this->db->where('id_cap', $id);
+        $query = $this->db->get('capacitaciones');
+        $fila = $query->row();
+        return $fila;
+    }
+
+     //actualizamos los datos en la base de datos con el patrón
+    //active record de codeIginiter, recordar que no hace falta
+    //escapar las consultas ya que lo hace él automaticámente
+    public function actualizar_capacitaciones($id, $titulo, $descripcion, $horas, $fechaCapa) {
+        $data = array(
+            'titulo_cap' => $titulo,
+            'descripcion_cap' => $descripcion,
+            'horas_cap' => $horas,
+            'estado_cap' => $estado,
+            'fecha_cap' => $fechaCapa
+        );
+        $this->db->where('id_cap', $id);
+        return $this->db->update('capacitaciones', $data);
+    }
+
 }
 ?>

@@ -15,6 +15,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	
 	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 	<link rel="stylesheet" href="<?php echo base_url();?>/css/style.css" type="text/css"/>
+
+	<script type="text/javascript">
+            //función encargada de procesar la solicitud al pulsar el botón pasar_edicion
+            function saltar(id){
+                $("#editar").load("http://localhost/updateCI/datos/mostrar_datos", { id: id }); 
+                $("#editar").fadeIn('2000');
+            }
+    </script>
+
+    <style type="text/css">
+    	#editar{
+                margin: 30px 0px 0px 300px;
+                background-color: #D0D0D0;
+                border: 3px solid #999;
+                width: 500px;
+                padding: 20px;
+                display: none;
+            }
+    </style>
 </head>
 <body>
 <main>

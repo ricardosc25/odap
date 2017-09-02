@@ -268,4 +268,12 @@ class Odap extends CI_Controller {
 			}
 
 		}
+
+		public function listCapacitaciones(){
+		$data['listCapa'] = $this->odap_model->listCapacitaciones(); 
+		$data['title'] = 'Odap';
+		$data['main_content'] = 'listCapaView';
+		$this->load->view('template',$data);
 	}
+
+}

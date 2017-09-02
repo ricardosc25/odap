@@ -1,7 +1,7 @@
     <div class="container">
     	<h5>MISIÓN:</h5>
     	<div class="divider"></div>
-    	<p>Brindar un servicio integral en educación a las personas naturales o jurídicas mediante la capacitación, asesoría, investigación en temas actuales de salud y jurídicos con recurso humano calificado para contribuir al desarrollo, actualización y mejoramiento continuo de los profesionales e instituciones, contribuyendo así al desarrollo de los mismos con equidad, igualdad y justicia social que fortalezcan los vínculos entre la comunidad y el sector salud.</p>
+    	<p>Brindar un servicio integral en educación a las personas naturales o jurídicas mediante la capacitación, asesoría, investigación en temas actuales de salud y jurídicos con recurso humano calificado para contribuir al desarrollo, actualización y mejoramiento continuo de los profesionales e instituciones, fortaleciendo los vínculos entre la comunidad y el sector salud.</p>
 
     	<h5>VISIÓN:</h5>
     	<div class="divider"></div>
@@ -16,7 +16,7 @@
     				<li class="collection-item grey lighten-3"><b>Honestidad:</b>  Respetamos los valores de justicia y verdad, actuando en concordancia.</li>
     				<li class="collection-item"><b>Trabajo en Equipo:</b> Porque trabajamos hacia metas compartidas y tenemos un objetivo común.</li>
     				<li class="collection-item grey lighten-3"><b>Compromiso:</b> Cumplimos con las obligaciones contraídas con nuestros clientes.</li>
-    				<li class="collection-item"><b>Disponibilidad:</b> Servimos de apoyo a su empresa en procesos de mejora continúa.</li>
+    				<li class="collection-item"><b>Disponibilidad:</b> Servimos de apoyo a su empresa en procesos de mejora continua.</li>
     				<li class="collection-item grey lighten-3"><b>Responsabilidad:</b> Cumplimos con todos nuestros compromisos.</li>
     				<li class="collection-item"><b>Confidencialidad:</b> Guardamos y protegemos con mucha reserva la información privada.</li>
     			</ul>
