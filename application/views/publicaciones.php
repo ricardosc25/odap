@@ -23,18 +23,9 @@
             <label for="horas">Horas</label>
           </div>
         </div>
-        <div class="col s12 m4">
-        <div class=" input-field">
-          <select name="estado">
-            <option value="" disabled selected >Estado</option>
-            <option value="1" <?php echo  set_select('estado', '1'); ?>>Activo</option>
-            <option value="0" <?php echo  set_select('estado', '0'); ?>>Inactivo</option>
-          </select>
-        </div>
-        </div>
          <div class="col s12 m4">
          <label for="fecha">Fecha de capacitacion</label>
-            <input type="text" class="datepicker" name="fecha" placeholder="Ejemplo 10 Agosto de 2017" value="<?php echo set_value('fecha');?>">
+            <input type="text" class="datepicker" name="fecha" placeholder="10 Agosto de 2017" value="<?php echo set_value('fecha');?>">
         </div>
         <div class="col s12">
            <p class="center-align">

@@ -51,7 +51,6 @@ class Odap_model extends CI_Model {
 	}
 
 	public function getCapacitaciones(){
-		$this->db->where('estado_cap',1);
 		$this->db->order_by("fecha_creacion", "desc"); 
 		$query = $this->db->get('capacitaciones');
 		return $query->result();
@@ -64,31 +63,44 @@ class Odap_model extends CI_Model {
 
 	}
 
-	//obtenemos la fila completa del mensaje a editar
-    //vemos que como solo queremos una fila utilizamos
-    //la función row que sólo nos devuelve una fila,
-    //así la consulta será más rápida
-        public function obtener($id) {
-        $this->db->where('id_cap', $id);
-        $query = $this->db->get('capacitaciones');
-        $fila = $query->row();
-        return $fila;
-    }
+	public function deleteCap($id){
+			$this->db->where('id_cap',$id);
+			$this->db->delete('capacitaciones');
+			$query = $this->db->affected_rows('capacitaciones');
+			if ($query){
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
 
-     //actualizamos los datos en la base de datos con el patrón
-    //active record de codeIginiter, recordar que no hace falta
-    //escapar las consultas ya que lo hace él automaticámente
-    public function actualizar_capacitaciones($id, $titulo, $descripcion, $horas, $fechaCapa) {
-        $data = array(
-            'titulo_cap' => $titulo,
-            'descripcion_cap' => $descripcion,
-            'horas_cap' => $horas,
-            'estado_cap' => $estado,
-            'fecha_cap' => $fechaCapa
-        );
-        $this->db->where('id_cap', $id);
-        return $this->db->update('capacitaciones', $data);
-    }
+	public function obtenerCapMdl($id){
+			$this->db->where('id_cap',$id);
+			$query = $this->db->get('capacitaciones');
+			if ($query){
+				return $query->result();
+			}
+			else
+			{
+				return false;
+			}
+			
+		}
 
+			public function updateCap($id, $data){
+			$this->db->where('id_cap',$id);
+			$this->db->update('capacitaciones',$data);
+			$query = $this->db->affected_rows('capacitaciones');
+			if ($query){
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+			
+		}
 }
 ?>

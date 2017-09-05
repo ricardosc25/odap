@@ -5,7 +5,11 @@
         $msj = $this->session->flashdata('publi_exitosa');
         if ($msj) { ?>
 
-        <center><span class="green-text" style="font-size: 22px;"> <?php echo (mb_strtoupper($msj,'UTF-8')); ?></span></center>
+        <center>
+        <div class='card-panel green lighten-3'>
+            <span style='font-size: 17px !important; font-weight: normal;'><?php echo (mb_strtoupper($msj,'UTF-8')); ?></span>
+        </div>
+        </center>
 
   <?php } ?>
   <div class="row">
@@ -29,9 +33,9 @@
                 </ul>
             <?php } }
             else{
-              echo "<div class='card-panel red lighten-3'>
-                      <span style='font-size: 17px !important; font-weight: normal;'>No existen registros de capacitaciones.</span>
-                    </div>";
+              echo "<center><div class='card-panel red lighten-3'>
+                    <span style='font-size: 17px !important; font-weight: normal;'>No existen registros en esta sección.</span>
+                  </div></center>";
             }
 
        ?>

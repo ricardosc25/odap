@@ -33,6 +33,7 @@
 				$('select').material_select();
 				$('.materialboxed').materialbox();
 				$('.modal').modal();
+				$('#modalEditar').modal('open');
 				 $('.carousel.carousel-slider').carousel({fullWidth: true}); //Utilizado por la galería
 				 $('#nextButton').click(function() {
 				 	$('.carousel').carousel('next');
@@ -43,25 +44,18 @@
 				 });
 
 				 $('.datepicker').pickadate({
-				 	monthsFull: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-				 	monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-				 	weekdaysFull: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-				 	weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
-				 	showMonthsShort: undefined,
-				 	showWeekdaysFull: undefined,
 				    selectMonths: true, // Creates a dropdown to control month
 				    selectYears: 15, // Creates a dropdown of 15 years to control year,
 				    today: 'Hoy',
 				    clear: 'Limpiar',
 				    close: 'Ok',
 				    closeOnSelect: false, // Close upon selecting a date,
-
 				    min: 1,
-				    max: 670,
-  				
+				    max: 670
 
 				});
-				});
+
+				 });
 
 			</script>
 		</body>

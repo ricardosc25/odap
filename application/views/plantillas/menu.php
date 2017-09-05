@@ -15,7 +15,13 @@
             <li><a href="<?php echo base_url();?>odap/inscripcion">Inscripciones</a></li>
             <li><a href="<?php echo base_url();?>odap/contacto">Contacto</a></li>
             <?php if($this->session->userdata('login')) {?>
-              <li><a href="<?php echo base_url();?>odap/publicaciones"><i class="material-icons black-text left">visibility</i>Nueva publicación</a></li>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="<?php echo base_url();?>odap/publicaciones">Publicar</a></li>
+              <li><a href="<?php echo base_url();?>odap/listCapacitaciones"">Mantenimiento</a></li>
+            </ul>
+              <!-- <li><a href="<?php echo base_url();?>odap/publicaciones"><i class="material-icons black-text left">visibility</i>Nueva publicación</a></li> -->
+               <li><a class="dropdown-button right" href="#!" data-activates="dropdown1">Opciones<i class="material-icons right">arrow_drop_down</i></a></li>
               <li><a href="<?php echo base_url();?>login/logout"><i class="material-icons black-text left">lock_outline</i>Cerrar sesión</a></li>
             <?php }else{ ?> 
               <li><a href="<?php echo base_url();?>login/"><i class="material-icons black-text left">lock_open</i>Login</a></li>
@@ -34,9 +40,16 @@
 
         <?php 
           if($this->session->userdata('login')) 
-        {?>     
+        {?>
+        <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="<?php echo base_url();?>odap/publicaciones">Publicar</a></li>
+              <li><a href="<?php echo base_url();?>odap/listCapacitaciones">Mantenimiento de publicaciones</a></li>
+            </ul>
+
           <li class="right"><a href="<?php echo base_url();?>login/logout"><i class="material-icons black-text left">lock_outline</i>Cerrar sesión</a></li>
-          <li class="right"><a href="<?php echo base_url();?>odap/publicaciones"><i class="material-icons black-text left">visibility</i>Nueva publicación</a></li>
+           <li class="right"><a class="dropdown-button" data-activates="dropdown1">Opciones<i class="material-icons right">arrow_drop_down</i></a></li>
+          <!-- <li class="right"><a href="<?php echo base_url();?>odap/publicaciones"><i class="material-icons black-text left">visibility</i>Nueva publicación</a></li> -->
         <?php }else{ ?> 
          <li class="right"><a href="<?php echo base_url();?>login/"><i class="material-icons black-text left">lock_open</i>Login</a></li>
        </ul>

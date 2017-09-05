@@ -46,7 +46,7 @@ class Login extends CI_Controller {
 			if ($resp == TRUE) 
 			{
 				$this->session->set_userdata($data);
-				redirect('odap/capacitaciones');
+				redirect('odap/index');
 			}
 			else
 			{

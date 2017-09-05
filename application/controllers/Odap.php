@@ -69,11 +69,6 @@ class Odap extends CI_Controller {
 				'rules' => 'required|min_length[1]|max_length[3]'
 				),
 			array(
-				'field' => 'estado',
-				'label' => 'Estado',
-				'rules' => 'required'
-				),
-			array(
 				'field' => 'fecha',
 				'label' => 'Fecha de capacitacion', 
 				'rules' => 'required'
@@ -94,7 +89,6 @@ class Odap extends CI_Controller {
 			'titulo_cap' => $this->input->post('titulo'),
 			'descripcion_cap' => $this->input->post('descripcion'),
 			'horas_cap' => $this->input->post('horas'),
-			'estado_cap' => $this->input->post('estado'),
 			'fecha_cap' => date('Y-m-d H:i:s',strtotime($this->input->post('fecha'))),
 			'fecha_creacion' => date('Y-m-d H:i:s'));
 
@@ -270,10 +264,108 @@ class Odap extends CI_Controller {
 		}
 
 		public function listCapacitaciones(){
+		if($this->session->userdata('login')){
 		$data['listCapa'] = $this->odap_model->listCapacitaciones(); 
 		$data['title'] = 'Odap';
 		$data['main_content'] = 'listCapaView';
 		$this->load->view('template',$data);
-	}
+		}else
+			{
+			redirect('/login/index/');
+			}
+		}
+
+		public function delete($id = NULL){
+			if ($id != NULL){
+				$res = $this->odap_model->deleteCap($id);
+				if($res = true){
+				//Creamos una variable de session para asignarle un mensaje.
+				$this->session->set_flashdata('del_reg', 'El registro ha sido eliminado');
+				//Redireccionamos al controlador Odap y la función capacitaciones, y pasamos la variable refresh.
+				redirect('/odap/listCapacitaciones', 'refresh');
+				}
+				
+			}
+
+		}
+
+		public function editar($id = NULL){
+			if($this->session->userdata('login')){
+				if($id != NULL){
+					$data['datos'] = $this->odap_model->obtenerCapMdl($id);
+					$data['title'] = 'Editar Usuario';
+					$data['main_content'] = 'editar';
+					$this->load->view('template',$data);
+				}else{
+					$this->listCapacitaciones();
+				}
+			 }
+			else
+			{
+				redirect('/login/index/');
+			}
+		}
+
+		public function update($id){
+		if($this->session->userdata('login')){
+			$rules = array(
+			array(
+				'field' => 'titulo',
+				'label' => 'Título',
+				'rules' => 'required|strtoupper|min_length[7]|max_length[30]'
+				),
+			array(
+				'field' => 'descripcion',
+				'label' => 'Descripción',
+				'rules' => 'required|ucfirst|min_length[7]|max_length[600]'
+				),
+			array(
+				'field' => 'horas',
+				'label' => 'Horas',
+				'rules' => 'required|min_length[1]|max_length[3]'
+				),
+			array(
+				'field' => 'fecha',
+				'label' => 'Fecha de capacitacion', 
+				'rules' => 'required'
+				)
+			);
+			//Pasamos el array para que sea validadado por el Form_Validation
+			$this->form_validation->set_rules($rules);
+			//Si la validación falla (False)
+			if($this->form_validation->run() == FALSE){
+				//Entonces volvemos a cargar el formulario de inscripción
+				//Importante pasar el id como parametro
+				$this->editar($id);
+			}
+			else
+			{
+			//Obtenemos los datos enviados por POST en el array $data.
+			$data = array(
+			'titulo_cap' => $this->input->post('titulo'),
+			'descripcion_cap' => $this->input->post('descripcion'),
+			'horas_cap' => $this->input->post('horas'),
+			'fecha_cap' => date('Y-m-d H:i:s',strtotime($this->input->post('fecha'))),
+			'fecha_update' => date('Y-m-d H:i:s'));
+
+			// Confirmamos que los datos se hayan insertado en la base de datos, retornando TRUE.
+			$resp = $this->odap_model->updateCap($id, $data);
+			//Si $resp es verdadera.
+			if ($resp == TRUE) {
+				//Creamos una variable de session para asignarle un mensaje.
+				$this->session->set_flashdata('act_reg', 'Actualización exitosa');
+				//Redireccionamos al controlador Odap y la función capacitaciones, y pasamos la variable refresh.
+				redirect('/odap/listCapacitaciones', 'refresh');
+			}//sino
+			else{
+				//Cargamos la funcion (error) que muestra mensaje al guardar los datos
+				$this->error(); 
+			}}
+
+		}else
+			{
+			redirect('/login/index/');
+			}
+		}
 
 }
