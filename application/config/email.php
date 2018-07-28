@@ -2,8 +2,8 @@
 $config['protocol'] = 'smtp';
 $config['smtp_host'] = 'ssl://smtp.googlemail.com';
 $config['smtp_port'] = 465;
-$config['smtp_user'] = 'ing.ricardosuarezc@gmail.com';
-$config['smtp_pass'] = 'ingsuarez2016';
+$config['smtp_user'] = 'correoOrigen';
+$config['smtp_pass'] = 'claveCorreo';
 $config['smtp_timeout'] = '7';
 $config['charset']    = 'utf-8';
 $config['newline']    = "\r\n";
